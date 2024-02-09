@@ -164,6 +164,8 @@ class PlayList {
                 add(other.getTrack(i));
             }
         }
+
+        size += other.size;
     }
 
     /** Returns the index in this list of the track that has the shortest duration,
