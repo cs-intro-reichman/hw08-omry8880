@@ -90,7 +90,7 @@ class PlayList {
      *  is full, does nothing and returns false. Otherwise, inserts the track and
      *  returns true. */
     public boolean add(int i, Track track) {
-        if (i < 0 || i >= size || size == maxSize) {
+        if (i < 0 || i > size || size == maxSize) {
             return false;
         }
 
@@ -163,7 +163,6 @@ class PlayList {
             for (int i = 0; i < other.size; i++) {
                 add(other.getTrack(i));
             }
-            size += other.size;
         }
     }
 
